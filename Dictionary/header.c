@@ -223,7 +223,7 @@ int testRNG(){
 	if(exists<1){												//Error message
 		printf("Error\n");
 	}
-	system("cls");	
+
 	fclose(file);													//Closing the file
 	return 0;
 }
