@@ -77,7 +77,6 @@ int main() {
 			break;
 		case 6:
 			testRNG();
-			system("pause");
 			system("cls");
 			break;
 		case 7: ;
