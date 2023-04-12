@@ -210,9 +210,9 @@ int testRNG(){
 			int result = testCZtoENorENtoCZ(cz, en);			//Testing from that word
 			
 			if(result == 1){									//Conditions for recognizing if there was a correct answer or not
-				cor++;
+				//cor++;
 			}else if(result == 0){
-				wro++;
+				//wro++;
 			}
 			exists++;
 			
@@ -223,28 +223,7 @@ int testRNG(){
 	if(exists<1){												//Error message
 		printf("Error\n");
 	}
-
-	float per = (cor * 100)/exists;								//Calculating percentage
-	system("cls");
-	
-	printf("Evaluation\n");										//Printing statistics
-	printf("==========\n");
-	printf("Number of words: %d\nCorrect answers: %.0f\nWrong answers: %.0f\nSuccess: %.2f %%\n\n", exists, cor, wro, per);
-	
-	int dec;
-	
-	printf("Do you want to save stats into file?(1-Yes 0-No): ");	//Asking whether users wants to save those stats into file
-	scanf("%d", &dec);
-	if(dec == 1){
-		int check = saveToFile(exists, cor, wro, per);				//Saving stats to the file (Used another function)
-		
-		if(check == -1){											//Error messages
-			printf("Failed to save statistics\n");
-		}else if(check == 0){
-			printf("Saved successfully into \"stats.txt\"\n");
-		}
-	}
-	
+	system("cls");	
 	fclose(file);													//Closing the file
 	return 0;
 }
